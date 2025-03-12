@@ -1,0 +1,71 @@
+     #main {
+
+     margin: 5px 0;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
+     'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-weight: 200;
+     text-align: center;
+     box-sizing: border-box;
+     }
+     img {
+        max-width: 100%;
+        display: block;
+        height: auto;
+        margin: 0 auto;
+       
+     }
+    body {
+        position: relative;
+        margin: 0;
+    }
+    
+     body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: top left;
+        background-repeat: repeat;
+        background-size: auto;
+        opacity: 0.1;
+        background-image: url('Songs_ohia_black_album_cover.jpg');
+        z-index: -1;
+     }
+
+     #title {
+        padding: 10px;
+     }
+    
+
+     .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1500px;
+    }
+
+    .section {
+        flex: 1 1 30%;
+        min-width: 300px; /* Ensures responsiveness */
+        padding: 20px;
+        text-align: left;
+        color: black;
+        font-family:monospace;
+       
+    }
+
+
+
+    /* Responsive Design */
+    @media (max-width: 900px) {
+        .container {
+            flex-direction: column;
+        }
+        .section {
+            flex: 1 1 30%;
+            width: 100%;
+        }
+    }
